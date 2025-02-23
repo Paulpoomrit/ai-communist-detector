@@ -61,11 +61,3 @@
   font-family: 'VT323', monospace;
   image-rendering: pixelated;
 }
-
-.progress-bar {
-  @apply h-6 bg-gray-200;
-}
-
-.progress-fill {
-  @apply h-full transition-all duration-300;
-}

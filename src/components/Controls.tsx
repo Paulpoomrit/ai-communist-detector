@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
+import { Progress } from "@/components/ui/progress";
 
 const Controls = () => {
   const [isMuted, setIsMuted] = useState(false);
@@ -65,11 +66,8 @@ const Controls = () => {
         </button>
       </div>
 
-      <div className="progress-bar h-6 mx-auto max-w-xl border-2 border-gray-400 bg-gray-100">
-        <div 
-          className="progress-fill h-full bg-blue-700"
-          style={{ width: `${progress}%` }}
-        />
+      <div className="w-full max-w-xl px-4">
+        <Progress value={progress} className="h-6 border-2 border-gray-400" />
       </div>
     </div>
   );
