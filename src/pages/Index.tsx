@@ -1,8 +1,9 @@
-
+"use client";
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Monitor from '@/components/Monitor';
 import Controls from '@/components/Controls';
+import ThreeScene from "../components/ThreeScene";
 
 const Index = () => {
   const [snowflakes, setSnowflakes] = useState<JSX.Element[]>([]);

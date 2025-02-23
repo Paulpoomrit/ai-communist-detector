@@ -1,3 +1,4 @@
+"use client";
 // lib/threeSetup.ts
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";

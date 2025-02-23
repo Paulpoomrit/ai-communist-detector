@@ -33,7 +33,7 @@ const ThreeScene: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="w-[50vw] h-[75vh] absolute top-0 left-0 translate-x-[9.5vw] translate-y-[15vh] z-1"
+      className="w-[100%] h-[100%] flex items-center justify-center absolute top-0 left-0 z-1"
     />
   );
 };
