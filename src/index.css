@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,6 +50,20 @@ html, body {
   @apply bg-gray-100;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+  background: url('/lovable-uploads/a3dad7ef-cfe6-4259-8a13-b07d030114c8.png') 0 0 / 88px 88px;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
 }
 
 .retro-monitor {
