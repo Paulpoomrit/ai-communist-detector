@@ -14,7 +14,7 @@ const Index = () => {
             <div className="h-full flex items-center justify-end scale-140 md:translate-y-[5%] md:translate-x-[10%] md:scale-125 lg:scale-[1.425] xl:scale-[1.475] transform-gpu">
               <Monitor />
             </div>
-            <div className="h-full flex items-center">
+            <div className="h-full flex items-center md:translate-x-[10%] transform-gpu">
               <Controls />
             </div>
           </div>
