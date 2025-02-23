@@ -9,7 +9,7 @@ const Monitor = () => {
       <div 
         className="absolute top-[10%] left-[9%] w-[82%] h-[63.5%] rounded bg-[#1903bd] flex items-center justify-center overflow-y-auto z-0"
       >
-        <div className="w-full py-4 flex items-center justify-center text-[#dadada] pixelated text-xl">
+        <div className="w-full flex items-center justify-center text-[#dadada] pixelated text-xl">
           Screen Content Coming Soon...
         </div>
       </div>
