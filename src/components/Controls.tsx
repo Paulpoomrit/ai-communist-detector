@@ -56,7 +56,7 @@ const Controls = () => {
             letterSpacing: '0.1em'
           }}
         >
-          Cancel
+          Result
         </button>
         <button 
           className="retro-button w-12 h-12 flex items-center justify-center bg-gray-200 border-2 border-gray-400 hover:bg-gray-300"
