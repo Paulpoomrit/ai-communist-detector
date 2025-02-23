@@ -118,9 +118,9 @@ html, body {
   position: fixed;
   width: 4px;
   height: 4px;
-  background: white;
+  background: #52ace4;
   border-radius: 0;
-  filter: drop-shadow(0 0 2px white);
+  filter: drop-shadow(0 0 2px #52ace4);
   animation: snow-fall 3s linear infinite;
 }
 
