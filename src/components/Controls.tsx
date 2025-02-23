@@ -15,12 +15,12 @@ const Controls = () => {
             alt="Pixelated Compass"
             className="w-12 h-12 pixelated"
           />
-          <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated text-black">
+          <span className="text-5xl md:text-6xl xl:text-7xl font-bold pixelated text-black">
             AI
           </span>
         </div>
         <div className="flex items-center justify-end">
-          <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated tracking-wider text-black">
+          <span className="text-5xl md:text-6xl xl:text-7xl font-bold pixelated tracking-wider text-black">
             Communist
           </span>
         </div>
@@ -30,7 +30,7 @@ const Controls = () => {
             alt="Pixelated Star"
             className="w-8 h-8 pixelated"
           />
-          <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated tracking-wider text-black">
+          <span className="text-5xl md:text-6xl xl:text-7xl font-bold pixelated tracking-wider text-black">
             Detector
           </span>
         </div>
