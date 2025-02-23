@@ -17,6 +17,7 @@ const Monitor = () => {
         className="absolute inset-0 bg-contain bg-no-repeat bg-center z-10"
         style={{ 
           backgroundImage: 'url("/lovable-uploads/a413fd98-c0ed-4f34-ab9f-79983264ebcb.png")',
+          pointerEvents: 'none'
         }}
       />
     </div>
