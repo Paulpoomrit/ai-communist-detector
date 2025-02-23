@@ -35,7 +35,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="noise" aria-hidden="true" />
       <div className="snow-container">
         {snowflakes}
       </div>
