@@ -8,8 +8,8 @@ const Controls = () => {
 
   return (
     <div className="w-full p-6 space-y-8 md:space-y-10 md:scale-75 lg:scale-75 xl:scale-75 transform-gpu">
-      <div className="text-center space-y-0">
-        <div className="flex items-center justify-center gap-2">
+      <div className="text-left space-y-0">
+        <div className="flex items-center gap-2">
           <img 
             src="/lovable-uploads/9cb0b0b6-1962-4390-92ba-bac2f5ecef23.png" 
             alt="Compass Icon"
@@ -19,12 +19,12 @@ const Controls = () => {
             AI
           </span>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center">
           <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated tracking-wider" style={{ color: '#1903bd' }}>
             Communist
           </span>
         </div>
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center gap-2">
           <div className="w-8 h-8">
             <svg viewBox="0 0 32 32" className="w-full h-full" style={{ fill: '#f72191' }}>
               <path d="M16 0 C18 8 24 14 32 16 C24 18 18 24 16 32 C14 24 8 18 0 16 C8 14 14 8 16 0"/>
