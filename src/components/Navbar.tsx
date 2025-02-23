@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 
 const Navbar = () => {
   return (
-    <nav className="p-4 flex justify-between items-center" style={{ backgroundColor: '#1903bd' }}>
+    <nav className="p-4 flex justify-between items-center relative z-50" style={{ backgroundColor: '#1903bd' }}>
       <div className="flex space-x-4">
         <Sheet>
           <SheetTrigger className="text-[#dadada] hover:text-gray-200 pixelated">
