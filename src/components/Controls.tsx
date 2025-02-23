@@ -18,16 +18,16 @@ const Controls = () => {
       </div>
 
       <div className="flex justify-center space-x-4">
-        <button className="retro-button" style={{ backgroundColor: '#1903bd', color: 'white' }}>
+        <button className="retro-button" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
           Start
         </button>
-        <button className="retro-button" style={{ backgroundColor: '#1903bd', color: 'white' }}>
+        <button className="retro-button" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
           Cancel
         </button>
         <button 
           className="retro-button w-12 flex items-center justify-center"
           onClick={() => setIsMuted(!isMuted)}
-          style={{ backgroundColor: '#1903bd', color: 'white' }}
+          style={{ backgroundColor: '#1903bd', color: '#dadada' }}
         >
           {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
         </button>

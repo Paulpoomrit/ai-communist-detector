@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="p-4 flex justify-between items-center" style={{ backgroundColor: '#1903bd' }}>
       <div className="flex space-x-4">
         <Sheet>
-          <SheetTrigger className="text-white hover:text-gray-200 pixelated">
+          <SheetTrigger className="text-[#dadada] hover:text-gray-200 pixelated">
             Terms & Conditions
           </SheetTrigger>
           <SheetContent>
@@ -21,7 +21,7 @@ const Navbar = () => {
         </Sheet>
 
         <Sheet>
-          <SheetTrigger className="text-white hover:text-gray-200 pixelated">
+          <SheetTrigger className="text-[#dadada] hover:text-gray-200 pixelated">
             How to Use
           </SheetTrigger>
           <SheetContent>

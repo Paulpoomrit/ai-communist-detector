@@ -7,7 +7,7 @@ const Monitor = () => {
       {/* Screen content layer */}
       <div className="absolute top-[10%] left-[14%] w-[71%] h-[65%] rounded z-0" style={{ backgroundColor: '#1903bd' }}>
         {/* Placeholder for future Three.js content */}
-        <div className="absolute inset-0 flex items-center justify-center text-white pixelated">
+        <div className="absolute inset-0 flex items-center justify-center text-[#dadada] pixelated">
           Screen Content Coming Soon...
         </div>
       </div>
