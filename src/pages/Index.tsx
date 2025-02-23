@@ -34,7 +34,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100 translate-x-[5%]">
+    <div className="min-h-screen bg-gray-100">
       <div className="snow-container">
         {snowflakes}
       </div>
