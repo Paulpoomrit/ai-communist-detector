@@ -9,17 +9,19 @@ const Controls = () => {
   return (
     <div className="w-full p-6 space-y-6 md:space-y-6 md:scale-75 lg:scale-75 xl:scale-75 transform-gpu">
       <div className="text-center space-y-2">
-        <div className="flex items-center justify-center space-x-2">
+        <div className="flex items-center justify-center">
+          <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#1903bd' }}>
+            AI
+          </span>
+        </div>
+        <div className="flex items-center justify-center">
           <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#1903bd' }}>
             Communist
           </span>
         </div>
-        <div className="flex items-center justify-center space-x-2">
+        <div className="flex items-center justify-center">
           <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#f72191' }}>
             Detector
-          </span>
-          <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#1903bd' }}>
-            AI
           </span>
         </div>
       </div>
