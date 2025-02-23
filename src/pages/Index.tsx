@@ -3,11 +3,12 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Monitor from '@/components/Monitor';
 import Controls from '@/components/Controls';
+import { Heart } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="h-screen flex flex-col">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
+      <div className="flex-1 flex flex-col">
         <Navbar />
         <div className="flex-1 container mx-auto p-4">
           <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-8 items-center max-w-[1920px] mx-auto">
@@ -20,6 +21,9 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <footer className="py-4 text-center text-gray-600 font-pixelify flex items-center justify-center gap-1">
+        made with <Heart className="h-4 w-4 text-red-500 fill-current" /> in Vancouver
+      </footer>
     </div>
   );
 };
