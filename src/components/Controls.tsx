@@ -7,33 +7,33 @@ const Controls = () => {
   const [progress, setProgress] = useState(30);
 
   return (
-    <div className="w-full p-6 space-y-6 md:scale-[0.55] lg:scale-[0.625] xl:scale-[0.7] transform-gpu">
+    <div className="w-full p-6 space-y-6 md:scale-110 lg:scale-125 xl:scale-140 transform-gpu">
       <div className="text-center space-y-2">
-        <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold pixelated" style={{ color: '#1903bd' }}>
+        <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#1903bd' }}>
           AI Communist
         </h1>
-        <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold pixelated" style={{ color: '#f72191' }}>
+        <h2 className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#f72191' }}>
           Detector
         </h2>
       </div>
 
       <div className="flex justify-center space-x-4 my-6">
-        <button className="retro-button px-4 py-1 text-sm md:text-base" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
+        <button className="retro-button px-6 py-2 text-base md:text-lg" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
           Start
         </button>
-        <button className="retro-button px-4 py-1 text-sm md:text-base" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
+        <button className="retro-button px-6 py-2 text-base md:text-lg" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
           Cancel
         </button>
         <button 
-          className="retro-button w-8 h-8 flex items-center justify-center"
+          className="retro-button w-12 h-12 flex items-center justify-center"
           onClick={() => setIsMuted(!isMuted)}
           style={{ backgroundColor: '#1903bd', color: '#dadada' }}
         >
-          {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+          {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
         </button>
       </div>
 
-      <div className="progress-bar h-4 mx-auto max-w-lg">
+      <div className="progress-bar h-6 mx-auto max-w-xl">
         <div 
           className="progress-fill h-full"
           style={{ width: `${progress}%`, backgroundColor: '#1903bd' }}
