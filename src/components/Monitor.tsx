@@ -5,9 +5,9 @@ const Monitor = () => {
   return (
     <div className="relative w-[500px] h-[400px] mx-auto">
       {/* Screen content layer */}
-      <div className="absolute top-[10%] left-[14%] w-[71%] h-[65%] bg-screen-dark rounded z-0">
+      <div className="absolute top-[10%] left-[14%] w-[71%] h-[65%] rounded z-0" style={{ backgroundColor: '#1903bd' }}>
         {/* Placeholder for future Three.js content */}
-        <div className="absolute inset-0 flex items-center justify-center text-gray-500 pixelated">
+        <div className="absolute inset-0 flex items-center justify-center text-white pixelated">
           Screen Content Coming Soon...
         </div>
       </div>
