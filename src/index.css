@@ -78,3 +78,28 @@ html, body {
   letter-spacing: 1px;
 }
 
+/* Windows XP style progress bar */
+.windows-xp-progress {
+  @apply h-6 border-2 rounded-none !important;
+  border-color: #222222 !important;
+  background: #f0f0f0 !important;
+}
+
+.windows-xp-progress [role="progressbar"] {
+  @apply rounded-none !important;
+  background: #1EAEDB !important;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  ) !important;
+  background-size: 20px 20px !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
