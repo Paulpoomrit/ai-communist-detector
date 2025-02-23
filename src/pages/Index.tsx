@@ -11,7 +11,7 @@ const Index = () => {
         <Navbar />
         <div className="flex-1 container mx-auto p-4">
           <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center max-w-[1920px] mx-auto">
-            <div className="h-full flex items-end justify-end md:scale-100 lg:scale-110 xl:scale-125 transform-gpu">
+            <div className="h-full flex items-center justify-end md:scale-100 lg:scale-110 xl:scale-125 transform-gpu">
               <Monitor />
             </div>
             <div className="h-full flex items-center">
