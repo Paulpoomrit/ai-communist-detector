@@ -56,7 +56,7 @@ const Controls = () => {
         </button>
       </div>
 
-      <div className="w-[75%] max-w-xl px-4">
+      <div className="w-[50%] max-w-xl px-4">
         <Progress value={progress} className="windows-xp-progress" />
       </div>
     </div>
