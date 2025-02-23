@@ -19,6 +19,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'pixelify': ['"Pixelify Sans"', 'serif'],
+      },
       colors: {
         // Custom retro colors
         "retro-blue": "#1EAEDB",
