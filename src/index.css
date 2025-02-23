@@ -62,8 +62,8 @@ html, body {
   pointer-events: none;
   z-index: 100;
   background: url('/lovable-uploads/a3dad7ef-cfe6-4259-8a13-b07d030114c8.png') 0 0 / 88px 88px;
-  opacity: 0.08;
-  mix-blend-mode: overlay;
+  opacity: 0.15;
+  mix-blend-mode: soft-light;
 }
 
 .retro-monitor {
