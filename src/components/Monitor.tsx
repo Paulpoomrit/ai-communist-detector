@@ -11,7 +11,7 @@ const Monitor = () => {
       >
         {/* Screen content positioned relative to monitor image */}
         <div 
-          className="absolute top-[17.5%] left-[5%] w-[89%] h-[49%] rounded bg-[#1903bd] flex items-center justify-center"
+          className="absolute top-[18.5%] left-[5%] w-[89%] h-[49%] rounded bg-[#1903bd] flex items-center justify-center"
         >
           <div className="w-full h-full flex items-center justify-center text-[#dadada] pixelated text-xl">
             Screen Content Coming Soon...
