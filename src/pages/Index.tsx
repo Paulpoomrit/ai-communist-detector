@@ -1,12 +1,43 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Monitor from '@/components/Monitor';
 import Controls from '@/components/Controls';
 
 const Index = () => {
+  const [snowflakes, setSnowflakes] = useState<JSX.Element[]>([]);
+
+  useEffect(() => {
+    const createSnowflakes = () => {
+      const flakes = [];
+      for (let i = 0; i < 50; i++) {
+        const left = `${Math.random() * 100}%`;
+        const animationDelay = `${Math.random() * 3}s`;
+        flakes.push(
+          <div
+            key={i}
+            className="snow"
+            style={{
+              left,
+              animationDelay,
+              top: `-${Math.random() * 10}vh`
+            }}
+          />
+        );
+      }
+      setSnowflakes(flakes);
+    };
+
+    createSnowflakes();
+    const interval = setInterval(createSnowflakes, 6000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100">
+      <div className="snow-container">
+        {snowflakes}
+      </div>
       <div className="h-screen flex flex-col">
         <Navbar />
         <div className="flex-1 container mx-auto p-4">
