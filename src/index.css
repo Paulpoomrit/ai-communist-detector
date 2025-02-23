@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -54,15 +55,17 @@
 }
 
 .retro-button {
-  @apply px-4 py-2 bg-gray-200 border-2 border-gray-400 shadow-md 
+  @apply px-4 py-2 shadow-md 
          hover:bg-gray-300 active:transform active:translate-y-px
-         transition-all duration-100 pixelated;
+         transition-all duration-100;
+  font-family: 'VT323', monospace;
+  image-rendering: pixelated;
 }
 
 .progress-bar {
-  @apply h-6 bg-gray-200 border-2 border-gray-400;
+  @apply h-6 bg-gray-200;
 }
 
 .progress-fill {
-  @apply h-full bg-retro-blue transition-all duration-300;
+  @apply h-full transition-all duration-300;
 }
