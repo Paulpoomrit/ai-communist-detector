@@ -11,9 +11,9 @@ const Controls = () => {
       <div className="text-right space-y-0">
         <div className="flex items-center justify-end gap-2">
           <img 
-            src="/lovable-uploads/9cb0b0b6-1962-4390-92ba-bac2f5ecef23.png" 
-            alt="Compass Icon"
-            className="w-12 h-12"
+            src="/lovable-uploads/03391eef-536c-4737-aa1e-aa0e59710d78.png" 
+            alt="Pixelated Compass"
+            className="w-12 h-12 pixelated"
           />
           <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#1903bd' }}>
             AI
