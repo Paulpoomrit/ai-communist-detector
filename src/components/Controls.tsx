@@ -39,12 +39,12 @@ const Controls = () => {
 
       <div className="flex justify-center space-x-4 my-8">
         <button 
-          className="retro-button px-8 py-2 text-base md:text-lg bg-gray-200 border-2 border-gray-400 hover:bg-gray-300 pixelated"
+          className="retro-button px-8 py-2 text-base md:text-lg bg-gray-200 border-2 border-gray-400 hover:bg-gray-300"
         >
           Start
         </button>
         <button 
-          className="retro-button px-8 py-2 text-base md:text-lg bg-gray-200 border-2 border-gray-400 hover:bg-gray-300 pixelated"
+          className="retro-button px-8 py-2 text-base md:text-lg bg-gray-200 border-2 border-gray-400 hover:bg-gray-300"
         >
           Result
         </button>
