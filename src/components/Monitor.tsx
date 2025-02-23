@@ -11,7 +11,7 @@ const Monitor = () => {
       >
         {/* Screen content positioned relative to monitor image */}
         <div 
-          className="absolute top-[10%] left-[9%] w-[82%] h-[61%] rounded bg-[#1903bd] flex items-center justify-center overflow-y-auto"
+          className="absolute top-[10%] left-[9%] w-[82%] h-[63.5%] rounded bg-[#1903bd] flex items-center justify-center overflow-y-auto"
         >
           <div className="w-full py-4 flex items-center justify-center text-[#dadada] pixelated text-xl">
             Screen Content Coming Soon...
