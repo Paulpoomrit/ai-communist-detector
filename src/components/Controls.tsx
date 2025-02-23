@@ -25,11 +25,11 @@ const Controls = () => {
           </span>
         </div>
         <div className="flex items-center justify-end gap-2">
-          <div className="w-8 h-8">
-            <svg viewBox="0 0 32 32" className="w-full h-full" style={{ fill: '#f72191' }}>
-              <path d="M16 0 C18 8 24 14 32 16 C24 18 18 24 16 32 C14 24 8 18 0 16 C8 14 14 8 16 0"/>
-            </svg>
-          </div>
+          <img 
+            src="/lovable-uploads/e97e5f3f-3582-43ae-ab85-26f85f9b1371.png"
+            alt="Pixelated Star"
+            className="w-8 h-8 pixelated"
+          />
           <span className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated tracking-wider" style={{ color: '#f72191' }}>
             Detector
           </span>
