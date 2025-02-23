@@ -4,7 +4,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Monitor = () => {
   return (
-    <div className="relative w-full max-w-[810px] aspect-[810/720] mx-auto">
+    <div className="relative w-[90%] max-w-[810px] aspect-[810/720] mx-auto">
       <div 
         className="relative w-full h-full bg-contain bg-no-repeat bg-center"
         style={{ backgroundImage: 'url("/lovable-uploads/a413fd98-c0ed-4f34-ab9f-79983264ebcb.png")' }}
