@@ -5,28 +5,19 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const Monitor = () => {
   return (
     <div className="relative w-[810px] h-[720px] mx-auto">
-      {/* Screen content layer */}
       <div 
-        className="absolute top-[17.5%] left-[7%] w-[89%] h-[49%] rounded z-0 flex items-center justify-center" 
-        style={{ backgroundColor: '#1903bd' }}
+        className="relative w-full h-full bg-contain bg-no-repeat bg-center"
+        style={{ backgroundImage: 'url("/lovable-uploads/a413fd98-c0ed-4f34-ab9f-79983264ebcb.png")' }}
       >
-        <div className="w-full h-full">
-          <AspectRatio ratio={16 / 9} className="h-full">
-            <div className="w-full h-full flex items-center justify-center text-[#dadada] pixelated text-xl bg-[#1903bd]">
-              Screen Content Coming Soon...
-            </div>
-          </AspectRatio>
+        {/* Screen content positioned relative to monitor image */}
+        <div 
+          className="absolute top-[17.5%] left-[7%] w-[89%] h-[49%] rounded bg-[#1903bd] flex items-center justify-center"
+        >
+          <div className="w-full h-full flex items-center justify-center text-[#dadada] pixelated text-xl">
+            Screen Content Coming Soon...
+          </div>
         </div>
       </div>
-      
-      {/* Monitor frame layer */}
-      <div 
-        className="absolute inset-0 bg-contain bg-no-repeat bg-center z-10"
-        style={{ 
-          backgroundImage: 'url("/lovable-uploads/a413fd98-c0ed-4f34-ab9f-79983264ebcb.png")',
-          pointerEvents: 'none'
-        }}
-      />
     </div>
   );
 };
