@@ -7,7 +7,7 @@ const Controls = () => {
   const [progress, setProgress] = useState(30);
 
   return (
-    <div className="w-full p-6 space-y-8 md:space-y-10 md:scale-75 lg:scale-75 xl:scale-75 transform-gpu">
+    <div className="w-full h-full flex flex-col items-center justify-center p-6 space-y-8 md:space-y-10 md:scale-75 lg:scale-75 xl:scale-75 transform-gpu">
       <div className="text-right space-y-0">
         <div className="flex items-center justify-end gap-2">
           <img 
