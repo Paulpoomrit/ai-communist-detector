@@ -7,7 +7,7 @@ const Controls = () => {
   const [progress, setProgress] = useState(30);
 
   return (
-    <div className="w-full p-6 space-y-6 md:scale-100 lg:scale-110 xl:scale-125 transform-gpu">
+    <div className="w-full p-6 space-y-6 md:scale-110 lg:scale-125 xl:scale-140 transform-gpu">
       <div className="text-center space-y-2">
         <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold pixelated" style={{ color: '#1903bd' }}>
           AI Communist
