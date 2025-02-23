@@ -4,7 +4,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Monitor = () => {
   return (
-    <div className="w-[810px] mx-auto">
+    <div className="relative w-[810px] h-[720px] mx-auto">
       <AspectRatio ratio={810/720}>
         <div 
           className="relative w-full h-full bg-contain bg-no-repeat bg-center"
