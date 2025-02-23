@@ -7,11 +7,17 @@ import Controls from '@/components/Controls';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
-      <Navbar />
-      <div className="container mx-auto p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Monitor />
-          <Controls />
+      <div className="h-screen flex flex-col">
+        <Navbar />
+        <div className="flex-1 container mx-auto p-4">
+          <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div className="h-full flex items-center justify-center">
+              <Monitor />
+            </div>
+            <div className="h-full flex items-center">
+              <Controls />
+            </div>
+          </div>
         </div>
       </div>
     </div>
