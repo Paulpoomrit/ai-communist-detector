@@ -3,7 +3,7 @@ import React from 'react';
 
 const Monitor = () => {
   return (
-    <div className="relative w-[650px] h-[550px] mx-auto">
+    <div className="relative w-[800px] h-[700px] mx-auto">
       {/* Screen content layer */}
       <div className="absolute top-[10%] left-[14%] w-[71%] h-[65%] rounded z-0" style={{ backgroundColor: '#1903bd' }}>
         {/* Placeholder for future Three.js content */}
