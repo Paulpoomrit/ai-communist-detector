@@ -7,21 +7,21 @@ const Controls = () => {
   const [progress, setProgress] = useState(30);
 
   return (
-    <div className="w-full p-6 space-y-8">
+    <div className="w-full p-6 space-y-8 md:scale-100 lg:scale-110 xl:scale-125 transform-gpu">
       <div className="text-center space-y-4">
-        <h1 className="text-5xl font-bold pixelated" style={{ color: '#1903bd' }}>
+        <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold pixelated" style={{ color: '#1903bd' }}>
           AI Communist
         </h1>
-        <h2 className="text-5xl font-bold pixelated" style={{ color: '#f72191' }}>
+        <h2 className="text-5xl md:text-6xl xl:text-7xl font-bold pixelated" style={{ color: '#f72191' }}>
           Detector
         </h2>
       </div>
 
       <div className="flex justify-center space-x-6 my-8">
-        <button className="retro-button px-8 py-3 text-lg" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
+        <button className="retro-button px-8 py-3 text-lg md:text-xl" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
           Start
         </button>
-        <button className="retro-button px-8 py-3 text-lg" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
+        <button className="retro-button px-8 py-3 text-lg md:text-xl" style={{ backgroundColor: '#1903bd', color: '#dadada' }}>
           Cancel
         </button>
         <button 
