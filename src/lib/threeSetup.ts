@@ -3,20 +3,24 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-//import { RGBELoader } from 'three/addons/loaders/RGBELoader.js'
-import Stats from "three/addons/libs/stats.module.js";
-//import { Lensflare, LensflareElement } from 'three/addons/objects/Lensflare.js'
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { LuminosityShader } from "three/addons/shaders/LuminosityShader.js";
+import { ColorifyShader } from "three/addons/shaders/ColorifyShader.js";
+import { SobelOperatorShader } from "three/addons/shaders/SobelOperatorShader.js";
+import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 
 export const initThreeJS = (container: HTMLDivElement) => {
   const sceneC = new THREE.Scene();
   // sceneC.background = new THREE.CubeTextureLoader()
   //   .setPath("https://sbcode.net/img/")
   //   .load(["px.png", "nx.png", "py.png", "ny.png", "pz.png", "nz.png"]);
-  const gridHelper = new THREE.GridHelper(100, 100)
-  gridHelper.position.set(0,-2,0)
-  sceneC.add(gridHelper)
+  const gridHelper = new THREE.GridHelper(100, 100);
+  gridHelper.position.set(0, -2, 0);
+  sceneC.add(gridHelper);
 
-  const light = new THREE.SpotLight(undefined, Math.PI * 1000);
+  const light = new THREE.SpotLight(undefined, Math.PI * 400);
   light.position.set(5, 5, 5);
   light.angle = Math.PI / 16;
   light.castShadow = true;
@@ -31,6 +35,9 @@ export const initThreeJS = (container: HTMLDivElement) => {
   camera.position.z = 1.5;
 
   const renderer = new THREE.WebGLRenderer();
+  renderer.shadowMap.enabled = true;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
 
@@ -39,6 +46,26 @@ export const initThreeJS = (container: HTMLDivElement) => {
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
   });
+
+  const composer = new EffectComposer(renderer);
+  const renderPass = new RenderPass(sceneC, camera);
+
+  const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight),0.2, 0.2, 0.1);
+  
+  const luminosityEffect = new ShaderPass(LuminosityShader);
+
+  const sobelEffect = new ShaderPass(SobelOperatorShader);
+  sobelEffect.uniforms["resolution"].value.x = window.innerWidth * window.devicePixelRatio;
+  sobelEffect.uniforms["resolution"].value.y = window.innerHeight * window.devicePixelRatio;
+
+  const colorify = new ShaderPass(ColorifyShader);
+  colorify.uniforms["color"].value.setRGB(1,0,0);
+
+  composer.addPass(renderPass);
+  composer.addPass(luminosityEffect);
+  composer.addPass(sobelEffect);
+  composer.addPass(colorify);
+  composer.addPass(bloomPass);
 
   new OrbitControls(camera, renderer.domElement);
 
@@ -71,13 +98,18 @@ export const initThreeJS = (container: HTMLDivElement) => {
       metalnessMap: metallicRoughness,
       normalMap: normalMap,
     });
+    marxHeadMaterial.map.colorSpace = THREE.SRGBColorSpace;
 
     marxHead.material = marxHeadMaterial;
     marxHead.scale.set(0.0015, 0.0015, 0.0015);
     marxHead.position.set(0.0, -0.5, 0);
+    marxHead.castShadow = true;
 
     sceneC.add(marxHead);
   });
+
+  
+   
 
   const animate = () => {
     requestAnimationFrame(animate);
@@ -87,7 +119,8 @@ export const initThreeJS = (container: HTMLDivElement) => {
       marxHead.rotation.z += 0.01;
     }
 
-    renderer.render(sceneC, camera);
+    // renderer.render(sceneC, camera);
+    composer.render();
   };
 
   animate();
