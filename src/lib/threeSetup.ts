@@ -37,6 +37,7 @@ export const initThreeJS = (container: HTMLDivElement) => {
   const renderer = new THREE.WebGLRenderer();
   renderer.shadowMap.enabled = true;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 3;
 
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
@@ -50,16 +51,27 @@ export const initThreeJS = (container: HTMLDivElement) => {
   const composer = new EffectComposer(renderer);
   const renderPass = new RenderPass(sceneC, camera);
 
-  const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight),0.2, 0.2, 0.1);
-  
+  const bloomPass = new UnrealBloomPass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    0.1,
+    0.7,
+    0.5
+  );
+
   const luminosityEffect = new ShaderPass(LuminosityShader);
 
   const sobelEffect = new ShaderPass(SobelOperatorShader);
-  sobelEffect.uniforms["resolution"].value.x = window.innerWidth * window.devicePixelRatio;
-  sobelEffect.uniforms["resolution"].value.y = window.innerHeight * window.devicePixelRatio;
+  sobelEffect.uniforms["resolution"].value.x =
+    window.innerWidth * window.devicePixelRatio;
+  sobelEffect.uniforms["resolution"].value.y =
+    window.innerHeight * window.devicePixelRatio;
 
   const colorify = new ShaderPass(ColorifyShader);
-  colorify.uniforms["color"].value.setRGB(1,0,0);
+  colorify.uniforms["color"].value.setRGB(
+    0.9686274509803922,
+    0.12941176470588237,
+    0.5686274509803921
+  );
 
   composer.addPass(renderPass);
   composer.addPass(luminosityEffect);
@@ -109,8 +121,6 @@ export const initThreeJS = (container: HTMLDivElement) => {
   });
 
   
-   
-
   const animate = () => {
     requestAnimationFrame(animate);
 
